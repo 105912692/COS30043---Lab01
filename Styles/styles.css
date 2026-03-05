@@ -6,6 +6,9 @@
 
 html, body {
     margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -26,7 +29,9 @@ header {
 }
 
 main {
+    flex: 1;
     padding: 1rem;
+    overflow-y: auto;
 }
 
 footer {
@@ -40,4 +45,81 @@ footer {
     height: 50px;
     width: auto;
     flex-shrink: 0;
+}
+
+table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #ffffff;
+    color: #212529;
+
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+
+    border: 2px solid #212529;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.10);
+}
+table caption{
+    caption-side: top;
+    text-align: center;
+
+    padding-top: 10px;
+    padding-right: 14px;
+    padding-bottom: 10px;
+    padding-left: 14px;
+
+    font-weight: 700;
+    font-size: 1.05rem;
+
+    color: #ffffff;
+    background-color: #212529;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+table thead th{
+    padding-top: 12px;
+    padding-right: 14px;
+    padding-bottom: 12px;
+    padding-left: 14px;
+
+    text-align: left;
+    font-weight: 700;
+
+    color: #212529;
+    background-color: #e6e7e7;
+
+    border-bottom: 2px solid #212529;
+}
+
+table tbody td{
+    padding-top: 12px;
+    padding-right: 14px;
+    padding-bottom: 12px;
+    padding-left: 14px;
+
+    border-bottom: 1px solid #e6e7e7;
+}
+
+table thead th:not(:last-child),
+table tbody td:not(:last-child){
+    border-right: 1px solid #e6e7e7;
+}
+
+table tbody tr:nth-child(even){
+    background-color: #e6e7e7;
+}
+table tbody tr:hover{
+    background-color: #ffffff;
+}
+
+table tbody tr:hover td{
+    box-shadow: inset 0px 0px 0px 2px #212529;
+}
+table tbody tr:last-child td{
+    border-bottom: none;
 }
