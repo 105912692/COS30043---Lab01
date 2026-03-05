@@ -6,9 +6,6 @@
 
 html, body {
     margin: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 header {
@@ -30,9 +27,7 @@ header {
 }
 
 main {
-    flex: 1;
     padding: 1rem;
-    overflow-y: auto;
 }
 
 footer {
@@ -137,4 +132,38 @@ table tbody tr:last-child td{
 #selectedpage a {
     background-color: red;
     color: black;
+}
+
+#section_div {
+    display: grid;
+
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+        "profile-list profile-pic";
+    gap: 30px; 
+    justify-content: start;
+    align-items: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.profile-list {
+    grid-area: profile-list;
+}
+
+.profile-pic {
+    grid-area: profile-pic;
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #212529;
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.15);
+}
+
+.profile-list ul {
+    padding-left: 18px;
+}
+
+.profile-list li {
+    margin-bottom: 6px;
 }
