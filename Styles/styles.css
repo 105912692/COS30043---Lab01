@@ -13,6 +13,7 @@ html, body {
 
 header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
     position: sticky;
@@ -39,6 +40,10 @@ footer {
     color: white;
     padding: 15px;
     text-align: center;
+
+    p {
+        background-color: black;
+    }
 }
 
 .logo {
@@ -81,20 +86,6 @@ table caption{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-table thead th{
-    padding-top: 12px;
-    padding-right: 14px;
-    padding-bottom: 12px;
-    padding-left: 14px;
-
-    text-align: left;
-    font-weight: 700;
-
-    color: #212529;
-    background-color: #e6e7e7;
-
-    border-bottom: 2px solid #212529;
-}
 
 table tbody td{
     padding-top: 12px;
@@ -110,16 +101,40 @@ table tbody td:not(:last-child){
     border-right: 1px solid #e6e7e7;
 }
 
-table tbody tr:nth-child(even){
-    background-color: #e6e7e7;
-}
-table tbody tr:hover{
-    background-color: #ffffff;
-}
-
-table tbody tr:hover td{
-    box-shadow: inset 0px 0px 0px 2px #212529;
-}
 table tbody tr:last-child td{
     border-bottom: none;
+}
+
+.navbar {
+    width: 100%;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+.navbar li {
+    float: left;
+}
+
+#selectedpage a {
+    background-color: red;
+    color: black;
 }
